@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { User } from 'lucide-react';
 import '../Styles/QueuePage.css'; // Import the CSS file
 
-// If you're using Google Fonts, you can include this in your index.html instead
-// This is just an example of how to dynamically load the font in React
-// Replace with actual Mont font URL if you have it
+// Note: Mont may not be available on Google Fonts.
+// For this example, we're using Montserrat which is visually similar.
+// If you have a license for Mont, use a different implementation method.
 import { Helmet } from "react-helmet"; // You may need to install this package
 
 export default function CardiologyQueue() {
@@ -70,11 +70,9 @@ export default function CardiologyQueue() {
     <>
       {/* If using react-helmet to load fonts dynamically */}
       <Helmet>
-        <link
-          rel="stylesheet"
-          href="https://yourfontserver.com/mont-font.css"
-          // Replace with actual Mont font URL
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Helmet>
       <div className="container">
       {/* Header */}
