@@ -1,0 +1,589 @@
+:root {
+  --primary-maroon: #800000;
+  --primary-maroon-light: #9A1919;
+  --primary-maroon-dark: #600000;
+  --white: #ffffff;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #555555;
+  --black: #333333;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+.hospital-container {
+    background-color: var(--white);
+    max-width: 500px;
+    min-height: 100vh; 
+    margin: 0 auto; 
+    display: flex; 
+    overflow: visible;
+    flex-direction: column;
+    position: relative; 
+}
+
+.header {
+    padding: 20px;
+    background-color: var(--primary-maroon);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    flex-shrink: 0;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.location-icon {
+    color: var(--white);
+    margin-right: 0.5rem;
+}
+
+.dropdown-icon {
+    color: var(--white);
+    margin-left: 0.25rem;
+    opacity: 0.8;
+}
+
+.profile-picture {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.hbanner {
+    justify-content: center;
+    margin: 0;
+    position: relative; 
+    width: 100%; 
+    height: 180px;
+    background-size: cover; 
+    background-position: center; 
+    flex-shrink: 0;
+}
+
+.banner-overlay {
+    position: absolute; 
+    justify-content: center;
+    align-items: center;
+    inset: 0; 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hbanner-content {
+    position: absolute; 
+    inset: 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    color: var(--white);
+    padding: 1rem; 
+}
+
+.banner-title {
+    font-size: 1.75rem; 
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 8px;
+}
+
+.banner-subtitle {
+    font-size: 0.9rem; 
+    margin-top: 0.5rem;
+    text-align: center;
+    max-width: 85%;
+}
+
+.book-now-button {
+    margin-top: 1.25rem;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--white);
+    color: var(--primary-maroon);
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-size: 0.9rem; 
+}
+
+.book-now-button:hover, .book-now-button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.scrollable-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 80px; 
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.search-header {
+    background-color: var(--primary-maroon);
+    padding: 16px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    color: var(--white);
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+
+.search-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.hsearch-bar {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    background-color: var(--white);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.search-bar-container {
+    background-color: var(--white);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.menu-icon {
+    color: #6b7280; 
+    margin-right: 0.75rem; 
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 12px 12px 12px 40px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--light-gray);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+.
+.search-input:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.free-tag{
+    color:#006008;
+}
+.search-icon {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-maroon);
+}
+
+.search-results-list {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+}
+
+.search-result-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--medium-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    transition: background-color 0.2s ease;
+}
+
+.search-result-item:active {
+    background-color: var(--light-gray);
+}
+
+.result-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.result-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.result-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0 0 4px 0;
+}
+
+.result-location {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    margin: 0;
+}
+
+.service-list {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--white);
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.service-card:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.service-image {
+    width: 90px;
+    height: 100%;
+    min-height: 90px;
+    object-fit: cover;
+    background-color: var(--primary-maroon);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.service-details {
+    padding: 12px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.star-icon {
+    color: #FFD700; 
+    margin-right: 4px;
+    font-size: 0.8rem;
+}
+
+.rating-value {
+    font-weight: 600;
+    margin-right: 8px;
+    font-size: 0.8rem;
+}
+
+.service-name {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: var(--black);
+}
+
+.service-description {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.service-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.button {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:focus {
+    outline: 2px solid rgba(139, 0, 0, 0.3);
+}
+
+.queue-header {
+    background-color: var(--primary-maroon);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: var(--white);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+}
+
+.back-arrow {
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.back-arrow:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.queue-button {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+.queue-button:hover, .queue-button:active {
+    background-color: var(--medium-gray);
+}
+
+.consult-button {
+    background-color: var(--primary-maroon);
+    color: var(--white);
+}
+
+.consult-button:hover, .consult-button:active {
+    background-color: var(--primary-maroon-dark);
+}
+
+.hospital-detail-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+.modal-content {
+    background-color: var(--white);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 450px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.modal-form {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 6px;
+}
+
+.form-input {
+    padding: 10px 12px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    background-color: var(--white);
+}
+
+.form-input:focus {
+    border-color: var(--primary-maroon);
+    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.1);
+    outline: none;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.form-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: var(--primary-maroon);
+}
+
+.form-checkbox:focus {
+    outline: 2px solid rgba(139, 0, 0, 0.3);
+    outline-offset: 2px;
+}
+
+.checkbox-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.medical-card-fields {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid var(--medium-gray);
+}
+
+.medical-card-fields .form-group {
+    margin-bottom: 8px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-top: 1px solid var(--medium-gray);
+    gap: 12px;
+}
+
+.modal-buttons .button {
+    flex: 1;
+    padding: 12px;
+}
+
+.cancel-button {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+.cancel-button:hover, .cancel-button:active {
+    background-color: var(--medium-gray);
+}
+
+.submit-button {
+    background-color: var(--primary-maroon);
+    color: var(--white);
+}
+
+.submit-button:hover, .submit-button:active {
+    background-color: var(--primary-maroon-dark);
+}
+
+
+@media (max-width: 360px) {
+    .banner-title {
+        font-size: 1.5rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .service-image {
+        width: 70px;
+    }
+    
+    .service-details {
+        padding: 10px;
+    }
+    
+    .service-buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .button {
+        width: 100%;
+    }
+}
+
