@@ -1,0 +1,230 @@
+/* General styling */
+/* Using Montserrat from Google Fonts as a visual substitute for Mont */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.header-curve {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  overflow: hidden;
+}
+
+.curve-bg {
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 100%;
+  background-color: #6b0000;
+  left: -6rem;
+  top: -6rem;
+}
+
+.header-icon {
+  position: absolute;
+  top: 3rem;
+  left: 1.5rem;
+  color: white;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 600; /* SemiBold weight for header */
+  color: #374151;
+  letter-spacing: -0.02em; /* Slight adjustment for better appearance */
+}
+
+.header-underline {
+  margin-top: 0.5rem;
+  border-top: 1px solid #ef4444;
+  width: 16rem;
+}
+
+/* Schedule dropdown */
+.schedule-dropdown {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  background-color: white;
+}
+
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 500; /* Medium weight for dropdown button */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-icon {
+  margin-left: 0.25rem;
+}
+
+/* Patient list */
+.patient-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.patient-item {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.patient-info {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  background-color: black;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.avatar-badge {
+  position: absolute;
+  bottom: -0.25rem;
+  right: -0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #dc2626;
+  border-radius: 9999px;
+  border: 2px solid white;
+}
+
+.patient-details {
+  margin-left: 1rem;
+}
+
+.patient-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.patient-name {
+  font-weight: 600; /* SemiBold for patient names */
+  color: #1f2937;
+  letter-spacing: -0.01em;
+}
+
+.priority-tag {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700; /* Bold for priority tags */
+}
+
+.priority-critical {
+  color: #dc2626;
+}
+
+.priority-urgent {
+  color: #ef4444;
+}
+
+.patient-condition {
+  font-size: 0.875rem;
+  color: #4b5563;
+  font-weight: 400; /* Regular weight for condition text */
+}
+
+.patient-actions {
+  display: flex;
+  align-items: center;
+}
+
+.patient-date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-right: 1rem;
+  font-weight: 500; /* Medium weight for dates */
+}
+
+.view-button {
+  padding: 0.25rem 0.75rem;
+  background-color: #dc2626;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600; /* SemiBold for buttons */
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navigation footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 0.75rem 0;
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-home {
+  color: #6b0000;
+}
+
+.nav-icon {
+  font-size: 1.25rem;
+}
+
+.nav-label {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-weight: 500; /* Medium weight for nav labels */
+}
+
+.nav-other {
+  color: #4b5563;
+}

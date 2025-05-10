@@ -1,3 +1,4 @@
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import HomePage from "./components/HomePage";
@@ -67,6 +68,15 @@ function App() {
   ]);
 
   return <RouterProvider router={router} />;
+=======
+import logo from './logo.svg';
+import './App.css';
+import QueuePage from './Pages/QueuePage';
+
+function App() {
+  return (
+       <QueuePage/>
+  );
 }
 
 export default App;
